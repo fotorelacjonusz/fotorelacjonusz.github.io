@@ -249,7 +249,6 @@ DEPENDENCIES
   github-pages
   jekyll-asciidoc
   jekyll-sitemap
-  minima (~> 2.0)
 
 BUNDLED WITH
    2.1.4

@@ -26,10 +26,14 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-theme: minima
+
+# Replace with daattali/beautiful-jekyll when following is resolved:
+# https://github.com/daattali/beautiful-jekyll/issues/339
+remote_theme: gpotter2/beautiful-jekyll
 
 plugins:
   - jekyll-asciidoc
+  - jekyll-remote-theme
   - jekyll-sitemap
 
 # Exclude from processing.
