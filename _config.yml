@@ -29,7 +29,6 @@ defaults:
 remote_theme: gpotter2/beautiful-jekyll
 
 plugins:
-  - jekyll-asciidoc
   - jekyll-remote-theme
   - jekyll-sitemap
 
