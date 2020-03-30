@@ -3,6 +3,11 @@ layout: page
 title: Fotorelacjonusz
 subtitle: A community tool for posting photo reports to skyscrapercity.com
 ---
+:page-liquid:
+
+++++
+{% include download_jumbo.html %}
+++++
 
 Fotorelacjonusz is free software distributed under the terms of the GNU General
 Public License version 3 or (at your option) any later version.
