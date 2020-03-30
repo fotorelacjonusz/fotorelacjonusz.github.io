@@ -16,6 +16,16 @@ download_link: https://github.com/fotorelacjonusz/fotorelacjonusz-ng/releases/la
 
 markdown: kramdown
 
+navbar-links:
+  en: /en
+  pl: /pl
+
+collections:
+  en:
+    output: true
+  pl:
+    output: true
+
 defaults:
   - scope:
       path: ""
