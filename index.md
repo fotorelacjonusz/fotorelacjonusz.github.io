@@ -11,7 +11,7 @@ Public License version 3 or (at your option) any later version.
 
 ### Installation instructions
 
-On Linux, you may want to download a DEB or RPM package, and then install it
+On GNU+Linux, you may want to download a DEB or RPM package, and then install it
 with your system package manager.  Alternatively, you may download the TAR.GZ
 archive and unpack it to a preferred location.
 
