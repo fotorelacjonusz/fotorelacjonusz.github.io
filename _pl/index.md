@@ -2,6 +2,7 @@
 layout: page
 title: Fotorelacjonusz
 subtitle: Narzędzie forumowej społeczności do wrzucania fotorelacji na skyscrapercity.com
+permalink: /pl
 ---
 
 {% include download_jumbo_pl.html %}

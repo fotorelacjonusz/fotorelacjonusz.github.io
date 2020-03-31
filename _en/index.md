@@ -2,6 +2,7 @@
 layout: page
 title: Fotorelacjonusz
 subtitle: A community tool for posting photo reports to skyscrapercity.com
+permalink: /en
 ---
 
 {% include download_jumbo_en.html %}
