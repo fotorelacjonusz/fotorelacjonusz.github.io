@@ -2,6 +2,7 @@
 layout: page
 title: Fotorelacjonusz
 subtitle: Narzędzie forumowej społeczności do wrzucania fotorelacji na skyscrapercity.com
+language: pl
 permalink: /pl
 ---
 
