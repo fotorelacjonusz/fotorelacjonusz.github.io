@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Authorization callback</title>
+    <meta name="robots" content="noindex">
+  </head>
+  <body>
+    <p id="result-msg">&hellip;</p>
+
+    <script>
+      if (typeof(WebSocket) !== "function") {
+        setMessage(
+          "This web browser does not support web sockets. " +
+          "Try in a different one."
+        )
+      }
+
+      parseCallbackUrl();
+
+      if (auth.userName) {
+        sendCredentials();
+      } else {
+        failure()
+      }
+
+      /***/
+
+      function parseCallbackUrl() {
+        try {
+          var fragment = window.location.hash.substring(1)
+          var query = window.location.search.substring(1)
+
+          window.auth = {
+            fragment: fragment,
+            state: query.match(/\bstate=([^&]*)/)[1],
+            userName: fragment.match(/\baccount_username=([^&]*)/)[1]
+          }
+        } catch {
+          window.auth = {}
+        }
+      }
+
+      function sendCredentials() {
+        sendCredentialsToClassicFR()
+      }
+
+      function sendCredentialsToClassicFR() {
+        var ws = new WebSocket("ws://localhost:1235");
+
+        ws.onopen = function(event) {
+          console.log("web socket opened")
+          ws.send(auth.fragment)
+          success()
+        }
+
+        ws.onerror = function(event) {
+          console.log("web socket error")
+          console.log(event)
+          failure()
+        }
+      }
+
+      function success() {
+        setMessage(
+          "You have been authenticated as " + auth.userName + ".  " +
+          "You may now close this window."
+        )
+      }
+
+      function failure() {
+        setMessage("Authentication didn't succeed.")
+      }
+
+      function setMessage(msg) {
+        var msgElement = document.getElementById("result-msg")
+        msgElement.innerText = msg;
+      }
+    </script>
+  </body>
+</html>
